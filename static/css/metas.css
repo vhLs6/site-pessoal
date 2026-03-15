@@ -1,0 +1,87 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(90rad, lightblue, #7AC8DF);
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 70px;
+    color: azure;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.container li {
+    list-style: none;
+    border: 1px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 210px;
+    background-color: azure;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    position: relative;
+    transition: 0.3s ease;
+    font-size: large;
+}
+.container li:hover{
+    transform: scale(1.05);
+}
+#popup-editar {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+#popup-editar.show {
+    display: block;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 5;
+}
+
+#overlay.show {
+    display: block;
+}
+a, .btn-editar {
+    text-decoration: none;
+    color: #61bbd6;
+}
+.pagina {
+    text-align: center;
+    padding: 15px;
+    background-color: aliceblue;
+    width: fit-content;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid lightblue;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.painelp {
+    font-size: 30px;
+}
+.direcionar {
+    font-size: 25px;
+}

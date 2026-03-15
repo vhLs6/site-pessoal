@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/metas.css') }}">
+</head>
+
+<body>
+    <div class="pagina">
+        <a class="direcionar" href="{{ url_for('desabafos.desabafos') }}">[ DESABAFOS ]</a>
+        <a class="painelp" href="{{ url_for('painel') }}">[ PAINEL PRINCIPAL ]</a>
+        <a class="painelp" href="{{ url_for('logout') }}">[ SAIR ]</a>
+        <a class="direcionar" href="{{ url_for('cartas.cartas') }}">[ CARTAS ]</a>
+    </div>
+    <h1 class="titulo">METAS</h1>
+<form action="/adicionar_meta" method="post">
+    <input type="text" name="meta" placeholder="Digite sua meta" autocomplete="off" style="font-size: 20px;">
+    <button type="submit" style="font-size: 20px;">Adicionar</button>
+</form>
+
+<ul class="container">
+{% for meta in metas %}
+    <li>
+        <span>{{ meta[1] }}</span><br>
+        <button class="btn-editar" data-id="{{ meta[0] }}" data-texto="{{ meta[1] }}">Editar</button>
+        <button><a href="{{ url_for('metas.deletar_meta', id=meta[0]) }}">Apagar</a></button>
+    </li>
+{% endfor %}
+</ul>
+
+<div id="overlay"></div>
+<div id="popup-editar">
+    <form id="form-editar" method="post">
+        <input type="text" name="meta" id="input-meta">
+        <button type="submit">Salvar</button>
+        <button type="button" onclick="fecharPopup()">Cancelar</button>
+    </form>
+</div>
+    <script src="{{ url_for('static', filename='../static/metas.js') }}" defer></script>
+</body>
+</html>

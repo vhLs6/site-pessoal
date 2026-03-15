@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cartas.css')}}">
+</head>
+
+<body>
+    <div class="pagina">
+        <a class="direcionar" href="{{ url_for('desabafos.desabafos') }}">[ DESABAFOS ]</a>
+        <a class="painelp" href="{{ url_for('painel') }}">[ PAINEL PRINCIPAL ]</a>
+        <a class="painelp" href="{{ url_for('logout') }}">[ SAIR ]</a>
+        <a class="direcionar" href="{{ url_for('metas.metas') }}">[ METAS ]</a>
+    </div>
+    <h1 class="titulo">CARTAS</h1>
+    <div class="opcoes">
+        <a href="{{ url_for('cartas.nova_carta') }}" class="link">Adicionar carta</a>
+    </div>
+    <div class="container">
+
+        {% for d in cartas %}
+        <div class="abas">
+            <div class="topo">
+                <button><a href="{{ url_for('cartas.deletar_carta', id=d[0]) }}" class="btn-apagar">Apagar</a></button>
+                <button><a href="{{ url_for('cartas.editar_carta', id=d[0]) }}"
+                        class="btn-editar">Editar</a></button>
+            </div>
+            <p style="border-bottom: 1px solid;">{{ d[2] }}</p>
+            <p>{{ d[1] }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>

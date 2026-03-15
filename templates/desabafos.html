@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desabafos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/desabafos.css') }}">
+</head>
+
+<body>
+    <div class="pagina">
+        <a class="direcionar" href="{{ url_for('metas.metas') }}">[ METAS ]</a>
+        <a class="painelp" href="{{ url_for('painel') }}">[ PAINEL PRINCIPAL ]</a>
+        <a class="painelp" href="{{ url_for('logout') }}">[ SAIR ]</a>
+        <a class="direcionar" href="{{ url_for('cartas.cartas') }}">[ CARTAS ]</a>
+    </div>
+    <h1 class="titulo">DESABAFOS</h1>
+    <div class="tudo">
+        <div class="opcoes">
+            <a href="{{ url_for('desabafos.novo_desabafo') }}" class="link">Adicionar desabafo</a>
+        </div>
+        <div class="total">
+            <p>Total: <span>{{ desabafos|length }}</span></p>
+        </div>
+    </div>
+    <div class="container">
+        {% for d in desabafos %}
+        <div class="abas">
+            <div class="topo">
+                <button><a href="{{ url_for('desabafos.deletar_desabafo', id=d[0]) }}"
+                        class="btn-apagar">Apagar</a></button>
+
+                <button><a href="{{ url_for('desabafos.editar_desabafo', id=d[0]) }}"
+                        class="btn-editar">Editar</a></button>
+            </div>
+            <p>{{ d[2] }}</p>
+            <hr>
+            <p>{{ d[1] }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

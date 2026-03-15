@@ -1,0 +1,16 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(90rad, lightblue, #7AC8DF);
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 70px;
+    color: azure;
+}
+
+.container {
+    font-size: 40px;
+    color: azure;
+}

@@ -1,0 +1,28 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(90rad, lightblue, #7AC8DF);
+    text-align: center;
+}
+.Boasvindas {
+    text-align: center;
+    font-size: 70px;
+    color: azure;
+}
+.bvpart2 {
+    color: azure;
+    font-size: 40px;
+}
+.opcoes {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+}
+.escolha {
+    color: #61bbd6;
+    font-size: 30px;
+}

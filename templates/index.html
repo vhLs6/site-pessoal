@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1 class="titulo">SITE PESSOAL</h1><br/>
+    <div>
+        <form action="/verificar" method="post"> 
+            <div class="container">
+                <label for="nome">Nome de Usuário: </label><br/>
+                <input type="text" id="nome" name="nome" autocomplete="off" style="font-size: 30px;">
+            </div>
+            <div class="container">
+                <label for="senha">Senha: </label><br/>
+                <input type="password" id="senha" name="senha" style="font-size: 30px;">
+            </div>
+            <button type="submit" style="font-size: 30px; padding: 10px 100px 7px 100px; margin-top: 10px;">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>

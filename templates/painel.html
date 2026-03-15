@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Painel</title>
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/painel.css') }}">
+
+<body>
+
+    <h1 class="Boasvindas">BEM VINDO, VICTOR!</h1>
+    <h1 class="bvpart2">O que você quer fazer hoje? </h1>
+    <div class="opcoes">
+        <h2><a href="{{ url_for('desabafos.desabafos') }}" class="escolha">Desabafar</a></h2>
+        <h2><a href="{{ url_for('metas.metas') }}" class="escolha">Ver metas</a></h2>
+        <h2><a href="{{ url_for('cartas.cartas') }}" class="escolha">Ver cartas</a></h2>
+        <h2><a href="{{ url_for('logout') }}" class="escolha">Sair</a></h2>
+    </div>
+</body>
+</html>

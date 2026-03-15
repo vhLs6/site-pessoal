@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escrever desabafo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/novo_desabafo.css') }}">
+</head>
+
+<body>
+    <h1 class="titulo">ESCREVER DESABAFO</h1>
+    <div class="form">
+        <form action="/salvar_desabafo" method="post">
+            <textarea name="texto" placeholder="Escreva seu desabafo" rows="16" cols="100"></textarea><br />
+            <button class="btn" type="submit">Salvar</button>
+    </div>
+    </form>
+</body>
+
+</html>

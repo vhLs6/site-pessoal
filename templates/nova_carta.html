@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escrever carta</title>
+</head>
+
+<body>
+    <div class="pagina">
+        <h1>{{ 'Editar Carta' if carta[0] else 'Nova Carta' }}</h1>
+
+        <form action="{{ url_for('cartas.atualizar_carta', id=carta[0]) if carta[0] else url_for('cartas.salvar_carta') }}" method="POST">
+            <textarea name="texto" placeholder="Escreva sua carta aqui..." required>{{ carta[1] }}</textarea>
+
+            <div class="botoes">
+                <button type="submit" class="btn-salvar">{{ 'Atualizar' if carta[0] else 'Salvar' }}</button>
+                <a href="{{ url_for('cartas.cartas') }}" class="btn-cancelar">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

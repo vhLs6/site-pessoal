@@ -1,0 +1,130 @@
+bodY {
+    min-height: 100vh;
+    background: linear-gradient(90rad, lightblue, #7AC8DF);
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 70px;
+    color: azure;
+}
+
+.topo {
+    display: flex;
+    gap: 5px;
+}
+
+.tudo {
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente */
+    justify-content: center;
+    /* Centraliza o conjunto */
+    gap: 20px;
+    /* Espaço entre as divs */
+    margin: 20px auto;
+    /* Margem em cima/baixo e centralizado */
+    width: fit-content;
+    /* Ajusta ao conteúdo */
+}
+
+.opcoes {
+    padding: 10px;
+    font-size: 50px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    background-color: azure;
+    width: fit-content;
+    border: 0.5px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+
+.total {
+    padding: 0 5px 0 5px;
+    font-size: 30px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    background-color: azure;
+    width: fit-content;
+    border: 0.5px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    color: #7AC8DF;
+}
+
+.container {
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+    gap: 10px;
+}
+
+.abas {
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: calc((100% / 5));
+    max-height: 250px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: azure;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+    font-size: large;
+}
+
+.abas:hover {
+    transform: scale(1.05);
+}
+
+.abas::-webkit-scrollbar {
+    display: none;
+}
+
+.link {
+    font-size: 50px;
+    color: #7AC8DF;
+}
+
+a {
+    color: #61bbd6;
+    text-decoration: none;
+}
+
+button {
+    font-size: 15px;
+    border-radius: 60px;
+    border: none;
+    width: fit-content;
+}
+
+.pagina {
+    text-align: center;
+    padding: 15px;
+    background-color: aliceblue;
+    width: fit-content;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid lightblue;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.painelp {
+    font-size: 30px;
+}
+
+.direcionar {
+    font-size: 25px;
+}
