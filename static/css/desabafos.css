@@ -1,32 +1,35 @@
-bodY {
+body {
     min-height: 100vh;
     background: linear-gradient(90rad, lightblue, #7AC8DF);
     text-align: center;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .titulo {
     text-align: center;
     font-size: 70px;
     color: azure;
+    margin: 20px 0;
+    word-wrap: break-word;
 }
 
 .topo {
     display: flex;
     gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tudo {
     display: flex;
     align-items: center;
-    /* Alinha verticalmente */
     justify-content: center;
-    /* Centraliza o conjunto */
     gap: 20px;
-    /* Espaço entre as divs */
     margin: 20px auto;
-    /* Margem em cima/baixo e centralizado */
     width: fit-content;
-    /* Ajusta ao conteúdo */
+    flex-wrap: wrap;
 }
 
 .opcoes {
@@ -42,7 +45,6 @@ bodY {
     border-radius: 20px;
     margin-bottom: 10px;
 }
-
 
 .total {
     padding: 0 5px 0 5px;
@@ -65,6 +67,7 @@ bodY {
     display: flex;
     margin: auto;
     gap: 10px;
+    padding: 0 10px;
 }
 
 .abas {
@@ -107,6 +110,8 @@ button {
     border-radius: 60px;
     border: none;
     width: fit-content;
+    padding: 8px 15px;
+    cursor: pointer;
 }
 
 .pagina {
@@ -119,12 +124,118 @@ button {
     border: 1px solid lightblue;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
 }
 
 .painelp {
     font-size: 30px;
+    word-wrap: break-word;
 }
 
 .direcionar {
     font-size: 25px;
+}
+
+/* Media Queries para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .titulo {
+        font-size: 40px;
+    }
+    
+    .opcoes {
+        font-size: 30px;
+        padding: 8px;
+    }
+    
+    .total {
+        font-size: 24px;
+    }
+    
+    .link {
+        font-size: 35px;
+    }
+    
+    .abas {
+        width: calc((100% / 2) - 30px);
+        font-size: medium;
+        margin: 5px;
+    }
+    
+    .painelp {
+        font-size: 24px;
+    }
+    
+    .direcionar {
+        font-size: 20px;
+    }
+    
+    .tudo {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .titulo {
+        font-size: 32px;
+        margin: 10px 0;
+    }
+    
+    .opcoes {
+        font-size: 24px;
+        padding: 6px;
+    }
+    
+    .total {
+        font-size: 20px;
+    }
+    
+    .link {
+        font-size: 28px;
+    }
+    
+    .abas {
+        width: calc(100% - 30px);
+        max-height: 200px;
+        font-size: small;
+    }
+    
+    .painelp {
+        font-size: 20px;
+    }
+    
+    .direcionar {
+        font-size: 18px;
+    }
+    
+    button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    
+    .container {
+        gap: 5px;
+    }
+}
+
+/* Para telas muito pequenas */
+@media screen and (max-width: 320px) {
+    .titulo {
+        font-size: 28px;
+    }
+    
+    .opcoes {
+        font-size: 20px;
+    }
+    
+    .total {
+        font-size: 18px;
+    }
+    
+    .link {
+        font-size: 24px;
+    }
+    
+    .abas {
+        width: calc(100% - 20px);
+    }
 }
